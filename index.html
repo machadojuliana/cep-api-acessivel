@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual a sua cidade baseada no CEP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>API de CEP: vamos acertar sua cidade</h1>
+        <p class="subtitulo">Será que acertamos sua cidade de acordo com o CEP?</p>
+
+        <!-- Formulário para permitir envio com 'Enter' -->
+        <form onsubmit="buscarCidade(event)" class="busca-form">
+            <label for="cep">Digite o CEP:</label>
+            <div class="input-grupo">
+                <input 
+                    id="cep" 
+                    type="text" 
+                    placeholder="Ex: 01001000" 
+                    required 
+                    aria-describedby="dicaCep"
+                    autocomplete="postal-code"
+                > 
+                <button type="submit">Achar Cidade</button>
+            </div>
+            <small id="dicaCep" class="dica-texto">Somente números, ex: 01001000</small>
+        </form>
+
+        <!-- aria-live="polite" avisa leitores de tela quando o resultado muda -->
+        <section class="resultados" aria-live="polite" role="status">
+            <p id="resultadoCidade">Cidade: </p>
+            <p id="resultadoBairro">Bairro: </p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

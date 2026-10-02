@@ -1,0 +1,109 @@
+/* Reset global e fonte base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    color: #121212;
+}
+
+/* Container principal (WCAG 1.3.1) */
+.card {
+    background-color: #ffe7fe;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.12);
+    max-width: 440px;
+    width: 90%;
+}
+
+h1 {
+    color: #121212; /* Contraste elevado superior a 4.5:1 (WCAG 1.4.3) */
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #4a4a4a;
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+}
+
+.busca-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+label {
+    font-weight: bold;
+    color: #121212;
+    font-size: 0.95rem;
+}
+
+.input-grupo {
+    display: flex;
+    gap: 8px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #595959; /* Borda bem visível (WCAG 1.4.11) */
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #121212;
+    min-height: 44px; /* Área de clique/toque adequada (WCAG 2.5.8) */
+}
+
+.dica-texto {
+    color: #595959;
+    font-size: 0.85rem;
+}
+
+button {
+    padding: 12px 18px;
+    background-color: #b40096; /* Contraste alto com texto branco */
+    color: #ffe7fe;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    min-height: 44px; /* Área de toque adequada (WCAG 2.5.8) */
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+/* Indicador claro de foco para navegação por teclado (WCAG 2.4.7) */
+input:focus-visible,
+button:focus-visible {
+    outline: 3px solid #b40096;
+    outline-offset: 3px;
+}
+
+/* Região de exibição dos dados */
+.resultados {
+    background-color: #fdfcfd;
+    padding: 16px;
+    border-radius: 6px;
+    border-left: 4px solid #b40096;
+}
+
+.resultados p {
+    margin: 6px 0;
+    color: #121212;
+    font-weight: bold;
+}
